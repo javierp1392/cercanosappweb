@@ -1,0 +1,12 @@
+.section-price-selection {
+    margin-bottom: 50px;
+}
+
+s {
+    text-decoration: line-through;
+}
+
+.descuento {
+    font-size: 25px;
+    /* color: #999; */
+}

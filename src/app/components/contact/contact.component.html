@@ -1,0 +1,92 @@
+<section id="contact" class="contact-area bg-gray ptb_100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-6">
+                <!-- Section Heading -->
+                <div class="section-heading text-center">
+                    <h2 class="text-capitalize">Habla con nosotros</h2>
+                    <p class="d-none d-sm-block mt-4">En CercanosApp queremos estar en contacto contigo, cuéntanos tus dudas o sugerencias y permítenos mejorar tu experiencia.</p>
+                    <!-- <p class="d-block d-sm-none mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati.</p> -->
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-12 col-md-5">
+                <!-- Contact Us -->
+                <div class="contact-us">
+                    <!-- <p class="mb-3">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p> -->
+                    <ul>
+                        <li class="py-2">
+                            <a class="media" href="#">
+                                <div class="social-icon mr-3">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <span class="media-body align-self-center">Tv. 28b #36 53, Bogotá, Cundinamarca</span>
+                            </a>
+                        </li>
+                        <li class="py-2">
+                            <a class="media" href="#">
+                                <div class="social-icon mr-3">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <span class="media-body align-self-center">+57 323 2040993</span>
+                            </a>
+                        </li>
+                        <li class="py-2">
+                            <a class="media" href="#">
+                                <div class="social-icon mr-3">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <span class="media-body align-self-center">info@cercanosapp.com</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 pt-4 pt-md-0">
+                <!-- Contact Box -->
+                <div class="contact-box text-center">
+                    <!-- Contact Form -->
+                    <form [formGroup]="contactForm" id="contact-form" method="POST" action="assets/php/mail.php">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" formControlName="nombre" name="name" placeholder="Nombre" required="required">
+                                </div>
+                                <div *ngIf="!contactForm.controls.nombre.valid && contactForm.controls.nombre.touched" class="text text-danger mt-1">
+                                    ¡El campo de nombre debe tener al menos 3 caracteres!
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" formControlName="email" name="email" placeholder="Correo electrónico" required="required">
+                                </div>
+                                <div *ngIf="!contactForm.controls.email.valid && contactForm.controls.email.touched" class="text text-danger mt-1">
+                                    ¡El correo electronico no es valido!
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" formControlName="tema" name="subject" placeholder="Tema" required="required">
+                                </div>
+                                <div *ngIf="!contactForm.controls.tema.valid && contactForm.controls.tema.touched" class="text text-danger mt-1">
+                                    ¡El campo de nombre debe tener al menos 3 caracteres!
+                                </div>
+
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <textarea class="form-control" formControlName="mensaje" name="message" placeholder="Mensaje" required="required"></textarea>
+                                </div>
+                                <div *ngIf="!contactForm.controls.mensaje.valid && contactForm.controls.mensaje.touched" class="text text-danger mt-1">
+                                    ¡El campo de nombre debe tener al menos 6 caracteres!
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button (click)="enviarFormulario()" type="submit" class="btn btn-lg btn-block mt-3"><span class="text-white pr-3"><i class="fas fa-paper-plane"></i></span>Enviar Mensaje</button>
+                            </div>
+                        </div>
+                    </form>
+                    <p class="form-message"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

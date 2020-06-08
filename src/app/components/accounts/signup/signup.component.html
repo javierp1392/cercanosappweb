@@ -1,0 +1,137 @@
+<div class="accounts inner-pages">
+    <div class="main">
+        <app-header-one></app-header-one>
+        <section id="home" class="section welcome-area bg-overlay d-flex align-items-center h-100vh">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <!-- Welcome Intro Start -->
+                    <div class="col-12 col-lg-7 d-none d-lg-block">
+                        <div class="welcome-intro">
+                            <h1 class="text-white">Crea tu Cuenta!</h1>
+                            <p class="text-white my-4">Estas a pocos pasos de tener tu tienta online, registrate como asociado y podras disfrutar de todos los beneficios y oportunidades que Cercanosapp tiene para ti.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8 col-lg-5">
+                        <!-- Contact Box -->
+                        <div class="contact-box bg-white text-center rounded p-4 p-sm-5 mt-5 mt-lg-0 shadow-lg">
+                            <!-- Contact Form -->
+                            <form [formGroup]="registerForm" novalidate id="contact-form">
+                                <div class="contact-top">
+                                    <h3 class="contact-title">
+                                        Regístrate</h3>
+                                    <h5 class="text-secondary fw-3 py-3">Llena todos los campos para dar inicio a la configuracion de tu tienda</h5>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fas fa-user-alt"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" name="name" formControlName="idccnit" placeholder="Id. Ingrese C.C. o Nit">
+                                                <div *ngIf="!registerForm.controls.idccnit.valid && registerForm.controls.idccnit.touched" class="text text-danger mt-1">
+                                                    ¡El campo de nombre debe tener al menos 6 caracteres!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fas fa-user-alt"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" name="name" formControlName="firstname" placeholder="Nombres">
+                                                <div *ngIf="!registerForm.controls.firstname.valid && registerForm.controls.firstname.touched" class="text text-danger mt-1">
+                                                    ¡El campo de nombre debe tener al menos 3 caracteres!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fas fa-user-alt"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" name="name" formControlName="lastname" placeholder="Apellidos">
+                                                <div *ngIf="!registerForm.controls.lastname.valid && registerForm.controls.lastname.touched" class="text text-danger mt-1">
+                                                    ¡El campo de nombre debe tener al menos 3 caracteres!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fas fa-user-alt"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" name="name" formControlName="nomtienda" placeholder="Nombre tienda/establecimiento">
+                                                <div *ngIf="!registerForm.controls.nomtienda.valid && registerForm.controls.nomtienda.touched" class="text text-danger mt-1">
+                                                    ¡El campo de nombre debe tener al menos 3 caracteres!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fas fa-user-alt"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" name="name" formControlName="phone" placeholder="Teléfono">
+                                                <div *ngIf="!registerForm.controls.phone.valid && registerForm.controls.phone.touched" class="text text-danger mt-1">
+                                                    ¡El campo del teléfono debe tener al menos 6 caracteres!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fas fa-envelope-open"></i></span>
+                                                </div>
+                                                <input type="email" class="form-control" name="email" formControlName="username" placeholder="Nombre de usuario(email)">
+                                                <div *ngIf="!registerForm.controls.username.valid && registerForm.controls.username.touched" class="text text-danger mt-1">
+                                                    ¡El nombre de usuario debe ser un correo electrónico!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fas fa-unlock-alt"></i></span>
+                                                </div>
+                                                <input type="password" class="form-control" name="password" formControlName="password" placeholder="Contraseña">
+                                                <div *ngIf="!registerForm.controls.password.valid && registerForm.controls.password.touched" class="text text-danger mt-1">
+                                                    ¡El campo de contraseña debe tener al menos 6 caracteres!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1"> -->
+                                            <label class="form-check-label contact-bottom" for="exampleCheck1"><span class="d-inline-block mt-3">Al registrarte estas aceptando nuestros <a href="politica-privacidad">Terminos</a> &amp; <a href="politica-privacidad">Políticas de Privacidad</a></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-bordered w-100 mt-3" type="submit" (click)="registerUser()">
+                                            Regístrate</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <span class="d-block pt-2 mt-4 border-top">¿Ya tienes una cuenta? <a href="inicio-sesion">Inicia sesion en la app</a></span>
+                                    </div>
+                                </div>
+                            </form>
+                            <p class="form-message"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Shape Bottom -->
+            <div class="shape-bottom">
+                <svg viewBox="0 0 1920 310" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg replaced-svg">
+                    <title>sApp Shape</title>
+                    <desc>Created with Sketch</desc>
+                    <defs></defs>
+                    <g id="sApp-Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="sApp-v1.0" transform="translate(0.000000, -554.000000)" fill="#FFFFFF">
+                            <path d="M-3,551 C186.257589,757.321118 319.044414,856.322454 395.360475,848.004007 C509.834566,835.526337 561.525143,796.329212 637.731734,765.961549 C713.938325,735.593886 816.980646,681.910577 1035.72208,733.065469 C1254.46351,784.220361 1511.54925,678.92359 1539.40808,662.398665 C1567.2669,645.87374 1660.9143,591.478574 1773.19378,597.641868 C1848.04677,601.75073 1901.75645,588.357675 1934.32284,557.462704 L1934.32284,863.183395 L-3,863.183395" id="sApp-v1.0"></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </section>
+    </div>
+</div>

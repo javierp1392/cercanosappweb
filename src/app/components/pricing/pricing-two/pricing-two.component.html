@@ -1,0 +1,155 @@
+<section id="pricing" class="section price-plan-area bg-gray overflow-hidden ptb_100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-7">
+                <!-- Section Heading -->
+                <div class="section-heading text-center">
+                    <h2>Desbloquea todo el potencial de CercanosApp</h2>
+                    <p class="d-none d-sm-block mt-4">Planes que se adaptan a tu negocio.</p>
+                    <!-- <p class="d-block d-sm-none mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati.</p> -->
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-around section-price-selection">
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+                <div class="row btn-group btn-group-toggle">
+                    <div class="col-12 col-md-2">
+                        <button (click)="onClickMe()" type="button" class="btn btn-secondary btn-lg active">Mensual</button>
+                    </div>
+                    <div class="col-12 col-md-4"></div>
+                    <div class="col-12 col-md-2">
+                        <button (click)="onClickMi()" type="button" class="btn btn-secondary btn-lg active">Anual</button>
+                    </div>
+                    <div class="col-12 col-md-2"></div>
+                </div>
+
+            </div>
+            <div class="col-4">
+
+
+            </div>
+        </div>
+        <div class="row justify-content-around ">
+            <div class="col-12 col-sm-12 col-lg-12">
+                <div class="row price-plan-wrapper">
+                    <div class="col-12 col-md-4">
+                        <!-- Single Price Plan -->
+                        <div class="single-price-plan text-center p-5 wow fadeInLeft" data-aos-duration="2s" data-wow-delay="0.4s">
+                            <!-- Plan Thumb -->
+                            <div class="plan-thumb">
+                                <img class="avatar-lg" src="assets/img/leadership.png" alt="">
+                            </div>
+                            <!-- Plan Title -->
+                            <div class="plan-title my-2 my-sm-3">
+                                <h3 class="text-uppercase">Basico</h3>
+                            </div>
+                            <!-- Plan Price -->
+                            <div class="plan-price pb-2 pb-sm-3">
+                                <h1 class="color-primary"><small class="fw-7">$</small>0</h1>
+                            </div>
+                            <!-- Plan Description -->
+                            <div class="plan-description">
+                                <ul class="plan-features">
+                                    <li class="border-top py-3">Hasta 5 productos.</li>
+                                    <li class="border-top py-3">Crealo tu mismo.</li>
+                                    <li class="border-top py-3">Permite que tus clientes creen su lista de compras.</li>
+                                    <li class="border-top border-bottom py-3">3 pedidos diarias</li>
+                                    <!-- <li class="border-top py-3">Chat en vivo con sus clientes </li>
+                                    <li class="border-top border-bottom py-3">2 meses gratis de almacenamiento en ventas y conversaciones</li> -->
+                                </ul>
+                            </div>
+                            <!-- Plan Button -->
+                            <div class="plan-button">
+                                <a href="#" class="btn mt-4">Inscríbete</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <!-- Single Price Plan -->
+                        <div class="single-price-plan text-center p-5 wow fadeInLeft" data-aos-duration="2s" data-wow-delay="0.4s">
+                            <!-- Plan Thumb -->
+                            <div class="plan-thumb">
+                                <img class="avatar-lg" src="assets/img/success.png" alt="">
+                            </div>
+                            <!-- Plan Title -->
+                            <div class="plan-title my-2 my-sm-3">
+                                <h3 class="text-uppercase">Standard</h3>
+                            </div>
+                            <!-- Plan Price -->
+                            <div *ngIf="precio" class="plan-price pb-2 pb-sm-3">
+                                <h1 class="color-primary"><small class="fw-7">$</small>80 mil</h1>
+                                <p>* Descuento del 50% por pago anual</p>
+
+                            </div>
+                            <div *ngIf="!precio" class="plan-price pb-2 pb-sm-3">
+                                <s class="descuento">$ 960 mil</s>
+                                <h1 class="color-primary"><small class="fw-7">$</small>480 mil</h1>
+
+
+                            </div>
+                            <!-- Plan Description -->
+                            <div class="plan-description">
+                                <ul class="plan-features">
+                                    <li class="border-top py-3">Hasta 50 productos.</li>
+                                    <li class="border-top py-3">Ascesoramiento en la creacion de tu tienda.</li>
+                                    <li class="border-top py-3">Permite que tus clientes creen su lista de compras.</li>
+                                    <li class="border-top py-3">Categoriza tus productos.</li>
+                                    <!-- <li class="border-top py-3">Adjunta tu inventario de productos.</li> -->
+                                    <li class="border-top border-bottom py-3">Un usuario Administrador.</li>
+                                    <li class="border-top border-bottom py-3">30 pedidos diarios.</li>
+                                </ul>
+                            </div>
+                            <!-- Plan Button -->
+                            <div class="plan-button">
+                                <a href="#" class="btn mt-4">Inscríbete</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <!-- Single Price Plan -->
+                        <div class="single-price-plan text-center p-5 wow fadeInRight" data-aos-duration="2s" data-wow-delay="0.4s">
+                            <!-- Plan Thumb -->
+                            <div class="plan-thumb">
+                                <img class="avatar-lg" src="assets/img/king.png" alt="">
+                            </div>
+                            <!-- Plan Title -->
+                            <div class="plan-title my-2 my-sm-3">
+                                <h3 class="text-uppercase">Profesional</h3>
+                            </div>
+                            <!-- Plan Price -->
+                            <div *ngIf="precio" class="plan-price pb-2 pb-sm-3">
+                                <h1 class="color-primary"><small class="fw-7">$</small>120 mil</h1>
+                                <p>* Descuento del 50% por pago anual</p>
+                            </div>
+                            <div *ngIf="!precio" class="plan-price pb-2 pb-sm-3">
+                                <s class="descuento">$ 1440000</s>
+                                <h1 class="color-primary"><small class="fw-7">$</small>720 mil</h1>
+                            </div>
+                            <!-- Plan Description -->
+                            <div class="plan-description">
+                                <ul class="plan-features">
+                                    <li class="border-top py-3">Hasta 500 productos.</li>
+                                    <li class="border-top py-3">Ascesoramiento en la creacion de tu tienda.</li>
+                                    <li class="border-top py-3">Permite que tus clientes creen su lista de compras.</li>
+                                    <li class="border-top py-3">Categoriza tus productos.</li>
+                                    <li class="border-top py-3">Un usuario Administrador. y recibe el 20% de descuento en usuarios adicionales.</li>
+                                    <li class="border-top py-3">Sé de los perimeros en aparecer en las opciones del comprador.</li>
+                                    <li class="border-top border-bottom py-3">Destaca tus productos del mes y promociones</li>
+                                    <li class="border-top py-3">Crea una comunidad con tus clientes</li>
+                                    <li class="border-top border-bottom py-3">100 pedidos diarios</li>
+                                </ul>
+                            </div>
+                            <!-- Plan Button -->
+                            <div class="plan-button">
+                                <a href="#" class="btn mt-4">Inscríbete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
