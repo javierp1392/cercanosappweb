@@ -10,6 +10,7 @@ import { ServiceOneComponent } from './components/services/service-one/service-o
 import { DiscoverOneComponent } from './components/discover/discover-one/discover-one.component';
 import { WorkComponent } from './components/work/work.component';
 import { ScreenshotOneComponent } from './components/screenshots/screenshot-one/screenshot-one.component';
+import { ScreenshotThreeComponent } from './components/screenshots/screenshot-three/screenshot-three.component';
 import { PricingOneComponent } from './components/pricing/pricing-one/pricing-one.component';
 import { FaqOneComponent } from './components/faq/faq-one/faq-one.component';
 import { TeamComponent } from './components/team/team.component';
@@ -206,6 +207,7 @@ export function provideConfig() {
     ContactPageComponent,
     HeaderOneComponent,
     HeaderTwoComponent,
+    ScreenshotThreeComponent,
   ],
   imports: [
     BrowserModule,
