@@ -474,7 +474,7 @@
 
 @media (max-width: 575px) {
     .single-screenshot>img {
-        /* max-width: 270px; */
+        max-width: 270px;
         margin: 0 auto;
     }
 }

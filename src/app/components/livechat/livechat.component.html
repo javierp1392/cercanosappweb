@@ -1,0 +1,11 @@
+<!-- <div>
+    <h1>
+        Welcome to the LiveChat Angular Widget example!
+    </h1>
+    <button (click)="openChatWindow()">Open LiveChat Widget</button>
+    <button (click)="hideChatWindow()">Minimize LiveChat Widget</button>
+</div> -->
+
+<livechat-widget #liveChatWidget licenseId="11998677" (onChatLoaded)="onChatLoaded($event)" (onChatWindowOpened)="onChatWindowOpened()" (onChatWindowMinimized)="onChatWindowMinimized()"></livechat-widget>
+
+<!-- [visitor]="visitor" [params]="params" -->

@@ -622,11 +622,11 @@ img {
 }
 
 .breadcrumb-area {
-    background: rgba(0, 0, 0, 0) url("../img/download-bg.jpg") no-repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) url("../img/mujercafe.jpg") no-repeat scroll center center / cover;
 }
 
 .blog .breadcrumb-area {
-    background: rgba(0, 0, 0, 0) url("../img/blog-5.jpg") no-repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) url("../img/mujercafe.jpg") no-repeat scroll center center / cover;
 }
 
 .inner-area {
@@ -1353,8 +1353,8 @@ img {
 
 .single-screenshot {
     position: relative;
-    -webkit-transform: scale(2, 8);
-    transform: scale(2, 8);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 .slick-dots {

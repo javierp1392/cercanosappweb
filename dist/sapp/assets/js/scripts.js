@@ -14,7 +14,7 @@
 // :: 12.0 COUNTERUP ACTIVE CODE
 // :: 13.0 FANCYBOX IMAGE GALLERY
 
-$(document).ready(function() {
+$( document ).ready(function() {
     'use strict';
 
     var $window = $(window);
@@ -23,19 +23,19 @@ $(document).ready(function() {
     function navMenu() {
 
         // MAIN MENU TOGGLER ICON (MOBILE SITE ONLY)
-        $('[data-toggle="navbarToggler"]').click(function() {
+        $('[data-toggle="navbarToggler"]').click(function () {
             $('.navbar').toggleClass('active');
             $('body').toggleClass('canvas-open');
         });
         // MAIN MENU TOGGLER ICON
-        $('.navbar-toggler').click(function() {
+        $('.navbar-toggler').click(function () {
             $('.navbar-toggler-icon').toggleClass('active');
         });
 
         // NAVBAR STICKY
         var $stickyNav = $(".navbar-sticky");
 
-        $(window).on("scroll load", function() {
+        $(window).on("scroll load", function () {
             var scroll = $(window).scrollTop();
             if (scroll >= 120) {
                 $stickyNav.addClass("navbar-sticky-moved-up");
@@ -60,7 +60,7 @@ $(document).ready(function() {
     navMenu();
 
     // :: 1.0 STICKY HEADER ACTIVE CODE
-    $window.on('scroll', function() {
+    $window.on('scroll', function () {
         if ($(window).scrollTop() > 100) {
             $('.main-header-area').addClass('navbar-sticky');
         } else {
@@ -68,7 +68,7 @@ $(document).ready(function() {
         }
     });
 
-    $window.on('scroll', function() {
+    $window.on('scroll', function () {
         $('.navbar-sticky').toggleClass('hide', $(window).scrollTop() > zero);
         zero = $(window).scrollTop();
     })
@@ -77,7 +77,7 @@ $(document).ready(function() {
     var offset = 300;
     var duration = 500;
 
-    $window.on('scroll', function() {
+    $window.on('scroll', function () {
         if ($(this).scrollTop() > offset) {
             $("#scrollUp").fadeIn(duration);
         } else {
@@ -85,7 +85,7 @@ $(document).ready(function() {
         }
     });
 
-    $("#scrollUp").on('click', function() {
+    $("#scrollUp").on('click', function () {
         $('html, body').animate({
             scrollTop: 0
         }, duration);
@@ -100,7 +100,7 @@ $(document).ready(function() {
     });
 
     // :: 4.0 SMOOTH SCROLLING ACTIVE CODE
-    scrollLink.on('click', function(e) {
+    scrollLink.on('click', function (e) {
         e.preventDefault();
         $('body,html').animate({
             scrollTop: $(this.hash).offset().top
@@ -176,17 +176,17 @@ $(document).ready(function() {
         }
     });
 
-    testimonialSlider.on("translate.owl.carousel", function() {
+    testimonialSlider.on("translate.owl.carousel", function () {
         $(".single-testimonial img, .single-testimonial-thumb img, .client-rating").removeClass("animated zoomIn").css("opacity", "0");
     });
-    testimonialSlider.on("translated.owl.carousel", function() {
+    testimonialSlider.on("translated.owl.carousel", function () {
         $(".single-testimonial img, .single-testimonial-thumb img, .client-rating").addClass("animated zoomIn").css("opacity", "1");
     });
-    $('.thumb-next').on('click', function() {
+    $('.thumb-next').on('click', function () {
         testimonialSlider.trigger('next.owl.carousel', [300]);
         return false;
     });
-    $('.thumb-prev').on('click', function() {
+    $('.thumb-prev').on('click', function () {
         testimonialSlider.trigger('prev.owl.carousel', [300]);
         return false;
     });
@@ -222,23 +222,24 @@ $(document).ready(function() {
         dots: true,
         arrows: false,
         speed: 2000,
-        slidesToShow: 1,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
         pauseOnHover: false,
         pauseOnFocus: false,
-        responsive: [{
+        responsive: [
+            {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 3,
                     slidesToScroll: 1
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 2,
                     dots: false
                 }
@@ -251,7 +252,7 @@ $(document).ready(function() {
                     dots: false
                 }
             }
-        ]
+          ]
     });
 
     // :: 10.0 WORK SLIDER ACTIVE CODE
@@ -299,7 +300,7 @@ $(document).ready(function() {
 
     // :: 13.0 FANCYBOX IMAGE GALLERY
     $('[data-fancybox="images"]').fancybox({
-        afterLoad: function(instance, current) {
+        afterLoad: function (instance, current) {
             var pixelRatio = window.devicePixelRatio || 1;
 
             if (pixelRatio > 1.5) {

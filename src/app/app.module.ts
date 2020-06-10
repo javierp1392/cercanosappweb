@@ -92,12 +92,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { SocialLoginModule, AuthServiceConfig, FacebookLoginProvider } from 'angularx-social-login';
 
+// livechat
+import { LivechatWidgetModule } from '@livechat/angular-widget';
+
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireFunctionsModule } from '@angular/fire/functions';
 // tslint:disable-next-line: no-unused-expression
 
 import { environment } from '../environments/environment';
+import { LivechatComponent } from './components/livechat/livechat.component';
 
 // const firebaseConfig = {
 //   apiKey: "AIzaSyAGPuLsWa_PR8yX5iP9RVRlZH9lT0Awq7U",
@@ -208,6 +212,7 @@ export function provideConfig() {
     HeaderOneComponent,
     HeaderTwoComponent,
     ScreenshotThreeComponent,
+    LivechatComponent,
   ],
   imports: [
     BrowserModule,
@@ -218,6 +223,7 @@ export function provideConfig() {
     ReactiveFormsModule,
     FormsModule,
     SocialLoginModule,
+    LivechatWidgetModule,
   ],
   providers: [
     {
