@@ -137,7 +137,10 @@ export class UserService {
             inactivo: false,
             fecha_inactivo: fechafb,
             fecha_creada: fechafb,
-            image_header:"https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Ficono%20tienda.png?alt=media&token=a77db12b-1b4a-4517-aad0-c2a403973567",
+            image_header:"https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Ftienda%2F18.png?alt=media&token=c740f4c5-3297-4186-99a1-51f9bd63267b",
+            image_header_426:"https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Ftienda%2F18_426x240.png?alt=media&token=c740f4c5-3297-4186-99a1-51f9bd63267b",
+            image_header_640:"https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Ftienda%2F18_640x360.png?alt=media&token=c740f4c5-3297-4186-99a1-51f9bd63267b",
+            image_header_1280:"https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Ftienda%2F18_1280x720.png?alt=media&token=c740f4c5-3297-4186-99a1-51f9bd63267b",
             telefono:phone,
             domicilio: false,
             costo_domicilio:0
@@ -182,18 +185,27 @@ export class UserService {
     //Adicionar banner asociado
     var docBanner = {
       // tslint:disable-next-line: max-line-length
-      description: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2FProximamente.png?alt=media&token=272f37ed-424c-48ff-a207-2b9e94754e06",
-      image: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_banner%2FInicio%2Ffondo%20banner%20%231.png?alt=media&token=4ced5b67-b542-4953-b0c4-10ece1b36a49",
+      description: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fbanner%2F2_426x240.png?alt=media&token=a624b30b-39b8-43ea-b830-c6cb399fe051",
+      image: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fbanner%2F2_426x240.png?alt=media&token=a624b30b-39b8-43ea-b830-c6cb399fe051",
+      image_426:"https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fbanner%2F2_426x240.png?alt=media&token=a624b30b-39b8-43ea-b830-c6cb399fe051",
+      image_640:"https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fbanner%2F2_640x360.png?alt=media&token=a624b30b-39b8-43ea-b830-c6cb399fe051",
+      image_1280:"https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fbanner%2F2_1280x720.png?alt=media&token=a624b30b-39b8-43ea-b830-c6cb399fe051",
       name: "Banner Inicial",
+      creacliente: false,
+      text:docData.nombre,
       shopping_groupId: docData.id
     };
 
     var docBanner2 = {
       // tslint:disable-next-line: max-line-length
-      description: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2FProximamente.png?alt=media&token=272f37ed-424c-48ff-a207-2b9e94754e06",
-      image: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_banner%2FInicio%2Ffondo%20banner%20%231.png?alt=media&token=4ced5b67-b542-4953-b0c4-10ece1b36a49",
+      description: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fbanner%2F2_426x240.png?alt=media&token=a624b30b-39b8-43ea-b830-c6cb399fe051",
+      image: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fbanner%2F2_426x240.png?alt=media&token=a624b30b-39b8-43ea-b830-c6cb399fe051",
+      image_426:"https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fbanner%2F2_426x240.png?alt=media&token=a624b30b-39b8-43ea-b830-c6cb399fe051",
+      image_640:"https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fbanner%2F2_640x360.png?alt=media&token=a624b30b-39b8-43ea-b830-c6cb399fe051",
+      image_1280:"https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fbanner%2F2_1280x720.png?alt=media&token=a624b30b-39b8-43ea-b830-c6cb399fe051",
       name: "Banner Secundario",
       text:docData.descripcion,
+      creacliente: false,
       shopping_groupId: docData.id
     };
 
@@ -209,7 +221,10 @@ export class UserService {
     var docCategory = {
       color: "dark",
       icon: "bed",
-      image: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fpodio%20general.png?alt=media&token=edda50b5-5985-407d-99d8-6e0af50e29e2",
+      image: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fcategoria%2F60_426x240.png?alt=media&token=de6941f7-d562-4fa5-83b1-d6f66a02c686",
+      image_426: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fcategoria%2F60_426x240.png?alt=media&token=de6941f7-d562-4fa5-83b1-d6f66a02c686",
+      image_640: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fcategoria%2F60_640x360.png?alt=media&token=de6941f7-d562-4fa5-83b1-d6f66a02c686",
+      image_1280: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fcategoria%2F60_1280x720.png?alt=media&token=de6941f7-d562-4fa5-83b1-d6f66a02c686",
       name: "Tu tienda"
     };
     this.firestore.collection('asociados/'+docData.id+'/shopping_category').doc('00PRINCIPAL').set(docCategory).then(function() {
@@ -227,13 +242,28 @@ export class UserService {
       shopping_category_name: 'Tu tienda',
       shopping_groupId: '1f4eNCpvqDlJiQ5wZVUh',
       stock: 100,
-      image: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fsinproducto1.png?alt=media&token=0d3e80fe-9c52-4764-bc4e-4abfc6c87be2",
+      image: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fitems%2F35_426x240.jpg?alt=media&token=772ddcd7-e46a-4e4b-a724-dcbf8c79c6ba",
       image_slide:[ 
-        "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fsinproducto1.png?alt=media&token=0d3e80fe-9c52-4764-bc4e-4abfc6c87be2", 
-        "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fsinproducto2.png?alt=media&token=0d1cf6d4-4cd3-43d2-bdd0-dc4a66d682af"
+        "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fitems%2F35_426x240.jpg?alt=media&token=772ddcd7-e46a-4e4b-a724-dcbf8c79c6ba", 
+        "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fitems%2F35_426x240.jpg?alt=media&token=772ddcd7-e46a-4e4b-a724-dcbf8c79c6ba"
         ],
-      name: "Tu Producto"
-    }
+        image_426: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fitems%2F35_426x240.jpg?alt=media&token=772ddcd7-e46a-4e4b-a724-dcbf8c79c6ba",
+        image_slide_426:[ 
+          "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fitems%2F35_426x240.jpg?alt=media&token=772ddcd7-e46a-4e4b-a724-dcbf8c79c6ba", 
+          "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fitems%2F35_426x240.jpg?alt=media&token=772ddcd7-e46a-4e4b-a724-dcbf8c79c6ba"
+          ],
+          image_640: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fitems%2F35_640x360.jpg?alt=media&token=772ddcd7-e46a-4e4b-a724-dcbf8c79c6ba",
+          image_slide_640:[ 
+            "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fitems%2F35_640x360.jpg?alt=media&token=772ddcd7-e46a-4e4b-a724-dcbf8c79c6ba", 
+            "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fitems%2F35_640x360.jpg?alt=media&token=772ddcd7-e46a-4e4b-a724-dcbf8c79c6ba"
+            ],
+            image_1280: "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fitems%2F35_1280x720.jpg?alt=media&token=772ddcd7-e46a-4e4b-a724-dcbf8c79c6ba",
+            image_slide_1280:[ 
+              "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fitems%2F35_1280x720.jpg?alt=media&token=772ddcd7-e46a-4e4b-a724-dcbf8c79c6ba", 
+              "https://firebasestorage.googleapis.com/v0/b/cercanosapp.appspot.com/o/imagenes_predeterminadas%2Fitems%2F35_1280x720.jpg?alt=media&token=772ddcd7-e46a-4e4b-a724-dcbf8c79c6ba"
+              ],
+                  name: "Tu Producto"
+    };
     this.firestore.collection('asociados/'+docData.id+'/shopping_item').doc('00PROD01').set(docItem).then(function() {
       console.log("Adiciono Item asociado!");
     });
@@ -246,6 +276,7 @@ export class UserService {
           id: newUser.user.uid,
           idccnit: '',
           asociado: false,
+          admincercanos: false,
           firstname: firstname,
           lastname: lastname,
           email: username,
