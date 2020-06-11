@@ -159,10 +159,15 @@ export class UserService {
     console.log('docdata email', docData.email);
 
     this.firestore.collection('mail').add({
-      nombre: docData.nombre,
-      email: docData.email,
-      tema: docData.tema,
-      mensaje: docData.mensaje
+      to: 'cercanosapp@netsolin.com',
+message: {
+  subject: 'Formulario de contacto cercanosappWeb',
+  text: 'This is the plaintext section of the email body.',
+  html: `nombre: ${docData.nombre}, 
+  email: ${docData.email},
+  tema: ${docData.tema},
+  mensaje: ${docData.mensaje} `,
+},
     })
     console.log('documento creado')
   }
@@ -171,9 +176,13 @@ export class UserService {
     console.log('docdata email', docData.email);
 
     this.firestore.collection('mail').add({
-      email: docData.email,
-      empreserial: true,
-      mensaje: docData.mensaje
+      to: 'cercanosapp@netsolin.com',
+      message: {
+        subject: 'Formulario precios empresarial de cercanosappWeb',
+        text: 'This is the plaintext section of the email body.',
+        html: `email: ${docData.email},
+        mensaje: ${docData.mensaje} `,
+      },
     })
     console.log('documento creado')
   }

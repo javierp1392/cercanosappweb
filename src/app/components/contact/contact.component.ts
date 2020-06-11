@@ -13,6 +13,7 @@ import { stringify } from 'querystring';
 })
 export class ContactComponent implements OnInit {
   public contactForm: FormGroup;
+  public enviado = false;
 
   constructor(public afAuth: AngularFireAuth, private fun: AngularFireFunctions, public  formBuilder: FormBuilder, private userService:  UserService) {
     let EMAIL_REGEXP = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
@@ -54,6 +55,7 @@ export class ContactComponent implements OnInit {
         // this.registerForm.value.username, 
         // this.registerForm.value.password
         )
+        this.enviado = true;
         console.log(this.contactForm.value)
         
 
