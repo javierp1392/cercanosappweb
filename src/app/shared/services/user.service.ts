@@ -176,13 +176,16 @@ message: {
     console.log('docdata email', docData.email);
 
     this.firestore.collection('mail').add({
-      to: 'cercanosapp@netsolin.com',
-      message: {
-        subject: 'Formulario precios empresarial de cercanosappWeb',
-        text: 'This is the plaintext section of the email body.',
-        html: `email: ${docData.email},
-        mensaje: ${docData.mensaje} `,
-      },
+      to: `${docData.email}`,
+      template: {
+        name: 'WelcomeMail',
+      // message: {
+      //   subject: 'Formulario precios empresarial de cercanosappWeb',
+      //   text: 'This is the plaintext section of the email body.',
+      //   html: `email: ${docData.email},
+      //   mensaje: ${docData.mensaje} `,
+      // },
+    },
     })
     console.log('documento creado')
   }

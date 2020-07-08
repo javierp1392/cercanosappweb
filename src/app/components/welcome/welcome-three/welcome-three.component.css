@@ -1,0 +1,11 @@
+.imagenwebapp {
+    border: 3px solid #ddd;
+    /* thickness and color of border */
+    border-radius: 15px;
+    /* edge rounding of border */
+    padding: 6px;
+    width: 75px;
+    /* width of image (px or % or auto) */
+    height: auto;
+    /* height of image (px or % or auto) */
+}
